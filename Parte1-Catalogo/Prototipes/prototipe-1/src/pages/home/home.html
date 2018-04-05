@@ -1,0 +1,156 @@
+<ion-header>
+  <ion-toolbar>
+    <button ion-button menu-toggle="left" clear color="dark" (click)="openMenu()">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-buttons end>
+
+      <button ion-button (click)="openProfile()">
+        <ion-avatar>
+          <img width="40" src="../../assets/imgs/mario.jpg" style="border: 1px solid black">
+        </ion-avatar>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-menu [content]="myContent">
+    <ion-item-group>
+      <ion-item-divider color="light">
+        Favoritos
+      </ion-item-divider>
+      <ion-item *ngFor="let favorite of favorites">
+        <a (click)="openEntity(favorite)">
+          {{favorite.name}}
+        </a>
+
+      </ion-item>
+      <ion-item-divider color="light">
+        Extras
+      </ion-item-divider>
+      <ion-item>
+        <a icon-start>
+          <ion-icon name="settings"></ion-icon>
+          Configurações
+        </a>
+
+      </ion-item>
+      <ion-item>
+        <a icon-start>
+          <ion-icon name="help"></ion-icon>
+          Perguntas
+        </a>
+
+      </ion-item>
+      <ion-item>
+        <a icon-start (click)="openAbout()">
+          <ion-icon name="information-circle"></ion-icon>
+          Sobre
+        </a>
+      </ion-item>
+    </ion-item-group>
+  </ion-menu>
+  <ion-nav #myContent></ion-nav>
+
+  <ion-list>
+    <ion-grid>
+      <ion-row justify-content-center>
+        <ion-col xm-col-4>
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title>Festa Junina</ion-card-title>
+            </ion-card-header>
+            <img src="../../assets/imgs/festa-junina.jpg">
+            <ion-card-content>
+              <b>Data: </b>10/06
+
+              <p>
+                Venha prestigiar nossa Festa Junina, teremos diversas atrações como:
+              </p>
+              <ul>
+                <tr>
+                  Roleta
+                </tr>
+                <tr>
+                  Brinquedos
+                </tr>
+                <tr>
+                  Pastel
+                </tr>
+                <tr>
+                  E muito mais!!!
+                </tr>
+              </ul>
+              <p>
+                <b>Endereço:</b> Bento Vieira Cruz, 281 Paulas e Mendes
+              </p>
+              <p>
+                <b>Cidade:</b> Piedade-SP
+              </p>
+            </ion-card-content>
+
+          </ion-card>
+        </ion-col>
+        <ion-col xm-col-4>
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title>
+                Campanha de arrecadação de roupas
+              </ion-card-title>
+            </ion-card-header>
+            <img src="../../assets/imgs/daocaoRoupa.jpg">
+            <ion-card-content>
+              <b>De: </b>10/06
+              <b>Até: </b>20/06
+
+              <p>
+                Estamos arrecadando peças de roupas para o inverno pois. Venha nos apoiar!!!
+              </p>
+
+              <p>
+                <b>Endereço:</b> Bento Vieira Cruz, 281 Paulas e Mendes
+              </p>
+              <p>
+                <b>Cidade:</b> Piedade-SP
+              </p>
+            </ion-card-content>
+
+          </ion-card>
+        </ion-col>
+        <ion-col xm-col-4>
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title>
+                Campanha de arrecadação de roupas
+              </ion-card-title>
+            </ion-card-header>
+            <img src="../../assets/imgs/daocaoRoupa.jpg">
+            <ion-card-content>
+              <b>De: </b>10/06
+              <b>Até: </b>20/06
+
+              <p>
+                Estamos arrecadando peças de roupas para o inverno pois. Venha nos apoiar!!!
+              </p>
+
+              <p>
+                <b>Endereço:</b> Bento Vieira Cruz, 281 Paulas e Mendes
+              </p>
+              <p>
+                <b>Cidade:</b> Piedade-SP
+              </p>
+            </ion-card-content>
+
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-list>
+  <ion-fab right bottom>
+    <button ion-fab only-icon (click)="openSearch()">
+      <ion-icon name="search"></ion-icon>
+    </button>
+  </ion-fab>
+</ion-content>

@@ -1,0 +1,37 @@
+<!--
+  Generated template for the EntityDetailsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>entity-details</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item *ngIf="entity.favorite" >
+      <ion-title item-start>{{entity.name}}</ion-title>
+      <button ion-button icon-only clear item-end (click)="unsetFavorite()">
+        <ion-icon name="star"></ion-icon>
+      </button>
+    </ion-item>
+    <ion-item *ngIf="!entity.favorite" >
+      <ion-title item-start>{{entity.name}}</ion-title>
+      <button ion-button icon-only clear item-end (click)="setFavorite()">
+        <ion-icon name="star-outline"></ion-icon>
+      </button>
+    </ion-item>
+    <ion-item>
+      <b>Descrição: </b>{{entity.descricao}}
+    </ion-item>
+    <ion-item>
+      <b>Data de fundação: </b>{{entity.descricao}}
+    </ion-item>
+  </ion-list>
+</ion-content>
