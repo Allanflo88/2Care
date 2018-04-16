@@ -47,7 +47,7 @@ Eu usuário, desejo visualizar o perfil da entidade selecionada para que assim, 
 Dado que estou na tela de busca, ao clicar sobre uma entidade, a tela de perfil deve abrir para a visualização.
 
 ## **Funcionalidade:** Receber notificações de evento
-Eu usuário, desejo receber notificações sobre eventos que serão realizados pelas minhas entidades favoritas para que não seja necessário abrir o appa para verificar novos eventos de minhas entidades favoritas.
+Eu usuário, desejo receber notificações sobre eventos que serão realizados pelas minhas entidades favoritas para que não seja necessário abrir o App para verificar novos eventos de minhas entidades favorita além disso, ser avisado pela adição de novas necessidades.
 
 **Cenário:**
 Dado que estou utilizando meu celular, ao ser criado um novo evento de uma entidade favorita, devo receber uma notificação sobre o evento.
@@ -64,14 +64,26 @@ Eu representante da entidade, desejo criar um perfil para a entidade onde deve c
 **Cenário:**
 Dado que estou na tela principal da plataforma, ao clicar sobre o avatar da entidade no menu lateral, a tela de perfil deve ser aberta com os campos a serem editados.
 
-## **Funcionalidade:**
+## **Funcionalidade:** Definir necessidades
+Eu representante da entidade, desejo mostrar as principais necessidades da entidade aos usuários, para assim, informar aos usuários as principais necessidades da entidade. 
 
 **Cenário:**
+Dado que estou na tela inicial da plataforma, ao clicar em "Adicionar item", adicionar uma nova necessidade da entidade caso o limite não tenha sido atingido, do contrário, esoclher uma necessidade para retirar da lista.
 
-## **Funcionalidade:**
-
-**Cenário:**
-
-## **Funcionalidade:**
+## **Funcionalidade:** Requisitar cadastro da entidade
+Eu representante da entidade, desejo cadastrar minha entidade no App, para que assim, a entidade possa ter maior visualização na população.
 
 **Cenário:**
+Dado que estou na página de login da plataforma, ao clicar em cadastrar entidade, a tela de requisição de cadastro é aberta para a inserção de dados básicos e os documentos necessários para validação.
+
+## **Funcionalidade:** Validar requisição
+Eu representante do App, desejo validar uma requisição de cadastro para que assim, a entidade seja adicionada ou não na plataforma.
+
+**Cenário:**
+Dado que estou na tela inicial da plataforma, ao selecionar a requisição, a tela de análise com todos os dados enviados pela entidade.
+
+## **Funcionalidade:** Cadastrar entidade
+Eu representante do App, desejo cadastrar uma entidade com requisição válida, para que assim, a entidade seja liberada para utilziar a plataforma.
+
+**Cenário:**
+Dado que validei a requisição de cadastro e estou na tela da requisição, ao clicar em "Cadastrar entidade", a entidade é cadastrada no banco de dados e uma notificação com o acesso é enviado a ela.
