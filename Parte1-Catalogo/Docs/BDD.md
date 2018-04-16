@@ -25,7 +25,7 @@ Eu usuário, desejo poder desselecionar entidades como favoritas.
 Dado que estou na tela de perfil da entidade, quando clicar sobre o botão de desfavoritar, o App deve tirar a entidade como favorita no banco de dados
 e o botão de favoritar deve estar vazio.
 
-## **Funcionalidade:** Visualizar detalhes de evento
+## **Funcionalidade:** Visualizar detalhes de evento (usuário)
 Eu usuário, desejo poder visualizar detalhes do evento selecionado, para que assim possa me informar melhor em relação ao evento específico.
 
 **Cenário1:**
@@ -40,6 +40,12 @@ Eu usuário, desejo poder visualizar as entidades que marquei como favoritas par
 **Cenário:**
 Dado que estou na tela inicial, ao abrir o menu lateral, as entidades devem aparecer no menu.
 
+## **Funcionalidade:** Visualizar perfil da entidade
+Eu usuário, desejo visualizar o perfil da entidade selecionada para que assim, possa conhece-la melhor.
+
+**Cenário:**
+Dado que estou na tela de busca, ao clicar sobre uma entidade, a tela de perfil deve abrir para a visualização.
+
 ## **Funcionalidade:** Receber notificações de evento
 Eu usuário, desejo receber notificações sobre eventos que serão realizados pelas minhas entidades favoritas para que não seja necessário abrir o appa para verificar novos eventos de minhas entidades favoritas.
 
@@ -52,13 +58,11 @@ Eu representante da entidade, desejo poder publicar eventos que serão realizado
 **Cenário:**
 Dado que estou na tela inicial da plataforma, ao clicar no botão "Criar evento", a tela para a criação de evento ser aberta para a inserção dos dados do evento.
 
-## **Funcionalidade:** 
+## **Funcionalidade:**  Criar perfil da entidade
+Eu representante da entidade, desejo criar um perfil para a entidade onde deve conter informações básicas, para que assim, os usuários possam conhece-la melhor.
 
 **Cenário:**
-
-## **Funcionalidade:**
-
-**Cenário:**
+Dado que estou na tela principal da plataforma, ao clicar sobre o avatar da entidade no menu lateral, a tela de perfil deve ser aberta com os campos a serem editados.
 
 ## **Funcionalidade:**
 
