@@ -1,3 +1,4 @@
+import { EventProvider } from './../event/event';
 import { EntityProvider } from './../entity/entity';
 import { Injectable } from '@angular/core';
 
@@ -13,12 +14,13 @@ export class EntityServiceProvider {
   entitys: EntityProvider[] = [];
 
   constructor() {
-    this.addEntity(new EntityProvider("APAE"))
+    this.addEntity(new EntityProvider("APAE", "Associação"))
     this.entitys[0].favorite = true;
-    this.addEntity(new EntityProvider("Lar São Vicente de Paulo"));
-    this.addEntity(new EntityProvider("AMAP"));
+    this.entitys[0].addEvent(this.entitys[0],"Festa Junina", "Realização da nossa festa junina típica",
+  "11/06/18", "11/06/18", "18:00", "../../assets/imgs/festa-junina.jpg");
+    this.addEntity(new EntityProvider("Lar São Vicente de Paulo", "Lar de idosos"));
+    this.addEntity(new EntityProvider("AMAP", "Associação de Amparo aos Autistas de Piedade"));
     this.entitys[2].favorite = true;
-    this.entitys[2].descricao = "Associação de Amparo aos Autistas de Piedade";
 
 
   }
@@ -38,7 +40,18 @@ export class EntityServiceProvider {
     return favorites;
   }
 
-  addEntity(entity: EntityProvider){
+  getEvents(){
+    var events = [];
+    this.entitys.forEach((entity) =>{
+      entity.getEvents().forEach((event)=>{
+
+        events.push(event);
+    })
+    });
+    return events;
+  }
+
+  addEntity(entity: EntityProvider): void{
     this.entitys.push(entity);
   }
 

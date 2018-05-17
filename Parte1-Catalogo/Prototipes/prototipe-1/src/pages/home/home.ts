@@ -1,3 +1,4 @@
+import { EventProvider } from './../../providers/event/event';
 import { EntityDetailsPage } from './../entity-details/entity-details';
 import { EntityServiceProvider } from './../../providers/entity-service/entity-service';
 import { SearchEntitysPage } from './../search-entitys/search-entitys';
@@ -14,9 +15,10 @@ import { NavController, MenuController } from 'ionic-angular';
 export class HomePage {
 
   favorites: EntityProvider[];
+  events: EventProvider[] = []
 
   constructor(public navCtrl: NavController, public menuCtrl: MenuController, private entitys: EntityServiceProvider) {
-    
+    this.events = entitys.getEvents();
   }
   openMenu(): void{
     this.favorites = this.entitys.getFavorites();

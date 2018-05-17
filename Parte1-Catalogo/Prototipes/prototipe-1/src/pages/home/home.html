@@ -55,98 +55,21 @@
   <ion-nav #myContent></ion-nav>
 
   <ion-list>
-    <ion-grid>
-      <ion-row justify-content-center>
-        <ion-col xm-col-4>
-          <ion-card>
-            <ion-card-header>
-              <ion-card-title>Festa Junina</ion-card-title>
-            </ion-card-header>
-            <img src="../../assets/imgs/festa-junina.jpg">
-            <ion-card-content>
-              <b>Data: </b>10/06
+    <ion-item *ngFor="let event of events">
+      <ion-card>
+        <ion-card-header>
+          {{event.titulo}}
+        </ion-card-header>
 
-              <p>
-                Venha prestigiar nossa Festa Junina, teremos diversas atrações como:
-              </p>
-              <ul>
-                <tr>
-                  Roleta
-                </tr>
-                <tr>
-                  Brinquedos
-                </tr>
-                <tr>
-                  Pastel
-                </tr>
-                <tr>
-                  E muito mais!!!
-                </tr>
-              </ul>
-              <p>
-                <b>Endereço:</b> Bento Vieira Cruz, 281 Paulas e Mendes
-              </p>
-              <p>
-                <b>Cidade:</b> Piedade-SP
-              </p>
-            </ion-card-content>
+        <ion-card-content>
+          <p>{{event.descricao}}</p>
+          <b>Início: </b>{{event.periodo.inicio}}
+          <br>
+          <b>Fim: </b>{{event.periodo.fim}}
 
-          </ion-card>
-        </ion-col>
-        <ion-col xm-col-4>
-          <ion-card>
-            <ion-card-header>
-              <ion-card-title>
-                Campanha de arrecadação de roupas
-              </ion-card-title>
-            </ion-card-header>
-            <img src="../../assets/imgs/daocaoRoupa.jpg">
-            <ion-card-content>
-              <b>De: </b>10/06
-              <b>Até: </b>20/06
-
-              <p>
-                Estamos arrecadando peças de roupas para o inverno pois. Venha nos apoiar!!!
-              </p>
-
-              <p>
-                <b>Endereço:</b> Bento Vieira Cruz, 281 Paulas e Mendes
-              </p>
-              <p>
-                <b>Cidade:</b> Piedade-SP
-              </p>
-            </ion-card-content>
-
-          </ion-card>
-        </ion-col>
-        <ion-col xm-col-4>
-          <ion-card>
-            <ion-card-header>
-              <ion-card-title>
-                Campanha de arrecadação de roupas
-              </ion-card-title>
-            </ion-card-header>
-            <img src="../../assets/imgs/daocaoRoupa.jpg">
-            <ion-card-content>
-              <b>De: </b>10/06
-              <b>Até: </b>20/06
-
-              <p>
-                Estamos arrecadando peças de roupas para o inverno pois. Venha nos apoiar!!!
-              </p>
-
-              <p>
-                <b>Endereço:</b> Bento Vieira Cruz, 281 Paulas e Mendes
-              </p>
-              <p>
-                <b>Cidade:</b> Piedade-SP
-              </p>
-            </ion-card-content>
-
-          </ion-card>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
+        </ion-card-content>
+      </ion-card>
+    </ion-item>
   </ion-list>
   <ion-fab right bottom>
     <button ion-fab only-icon (click)="openSearch()">
