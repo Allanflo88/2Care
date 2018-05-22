@@ -1,0 +1,4 @@
+MEAN: https://github.com/linnovate/mean
+MongoDB: https://docs.mongodb.com/
+Express: http://expressjs.com/
+Angular: https://angular.io
